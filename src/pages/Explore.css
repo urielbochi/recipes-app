@@ -16,8 +16,7 @@
 .explore {
   display: flex;
   flex-direction: column;
-  height: 640px;
-  margin-top: 50%;
+  align-items: center;
 }
 
 .explore-drink {

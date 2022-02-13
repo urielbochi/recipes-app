@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@200&family=Hahmlet:wght@200&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto+Condensed:wght@300&display=swap');
+
 .form-container {
-  height: 640px;
-  margin-top: 0;
-  padding-top: 0;
-  width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group {
@@ -12,4 +12,11 @@
 
 .login-button {
   width: 320px;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(246, 201, 0);
+  font-weight: bolder;
+  
 }

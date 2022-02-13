@@ -26,8 +26,10 @@ function MainDrink() {
   return (
     <>
       <Header title="Bebidas" />
+      <br></br>
+      <br></br>
+      <br></br>
       <DrinkCategories />
-
       <div className="map-cards">
         {drinkCardList.map((item, index) => (
           <Link to={ `/bebidas/${item.idDrink}` } key={ item.idDrink }>

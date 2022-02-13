@@ -7,6 +7,7 @@ import actionLogin from '../redux/actions/actionLogin';
 import './Login.css';
 
 const Login = () => {
+  const text = 'cuidado!'
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
@@ -17,8 +18,11 @@ const Login = () => {
     localStorage.setItem('cocktailsToken', 1);
   };
 
+    email.length === 0 && alert('Por favor, visualize em 360x640')
+
   return (
     <Form className="form-container">
+      <h1 className='title'>Cookpedia</h1>
       <Form.Group className="form-group">
         <Form.Label
           htmlFor="email"

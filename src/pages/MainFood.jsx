@@ -26,6 +26,9 @@ function MainFood() {
   return (
     <>
       <Header title="Comidas" />
+      <br></br>
+      <br></br>
+      <br></br>
       <FoodCategories />
       <div className="map-cards">
         {foodCardList.map((item, index) => (
