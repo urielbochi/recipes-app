@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import loginValidation from '../services/loginValidation';
 import actionLogin from '../redux/actions/actionLogin';
 import './Login.css';
+import { useEffect } from 'react';
 
 const Login = () => {
   const text = 'cuidado!'
@@ -18,7 +19,9 @@ const Login = () => {
     localStorage.setItem('cocktailsToken', 1);
   };
 
-    email.length === 0 && alert('Por favor, visualize em 360x640')
+    useEffect(() => {
+      alert('Por favor, visualize em 360x640')
+    },[])
 
   return (
     <Form className="form-container">

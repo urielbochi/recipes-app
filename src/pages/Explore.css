@@ -22,8 +22,6 @@
 .explore-drink {
   display: flex;
   flex-direction: column;
-  height: 640px;
-  margin-top: 50%;
 }
 
 .fix-top {
