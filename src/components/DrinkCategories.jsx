@@ -26,7 +26,7 @@ export default function DrinkCategories() {
   };
 
   return (
-    <div className="drink-category">
+    <div className="d-flex f-wrap m-y-1 j-c-center a-i-center">
       <Button
         data-testid="All-category-filter"
         className="drink-category-button"

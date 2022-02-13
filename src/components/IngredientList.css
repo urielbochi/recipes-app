@@ -1,0 +1,5 @@
+.tryingFix{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './IngredientList.css';
 
 const IngredientListHandle = (array) => {
   const obj = array[0].map((n) => (
@@ -16,15 +17,15 @@ export default function IngredientList(props) {
   const ingredients = IngredientListHandle(array.ingredients);
 
   return (
-    <>
+    <div className='tryingFix'>
       {ingredients.map((n, index) => (
-        <p
+        <li
           Key={ index }
           data-testid={ `${index}-ingredient-name-and-measure` }
         >
           {`${n} ${measures[index]}`}
-        </p>))}
-    </>
+        </li>))}
+    </div>
   );
 }
 

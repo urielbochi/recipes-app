@@ -4,6 +4,7 @@ import getFavorite from '../services/getFavorite';
 import urlApiHandle, { DataManeger } from '../services/urlApiHandle';
 import wIcon from '../images/whiteHeartIcon.svg';
 import bIcon from '../images/blackHeartIcon.svg';
+import './ShareButton.css'
 
 const FavoriteChangerHandle = (Recipe, id, type) => {
   const storage = localStorage.getItem('favoriteRecipes');
@@ -65,15 +66,15 @@ function FavoriteButton(props) {
   }, [id, type, favorbutton]);
 
   return (
-    <button
+    <div
       type="button"
       onClick={ () => {
         if (isClicked) window.location.reload();
         setfavorite(FavoriteChanger(getFavorite(id), Recipe, id, type));
       } }
     >
-      <img data-testid={ datatestid } src={ favorbutton } alt="white-heart" />
-    </button>
+      <img className='shareConfig' data-testid={ datatestid } src={ favorbutton } alt="white-heart" />
+    </div>
   );
 }
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import shareButtonHandle from '../services/Sharebuttonhandle';
 import shareIcon from '../images/shareIcon.svg';
+import './ShareButton.css'
+
 
 function ShareButton(props) {
   const [copiedbutton, setcopy] = useState(false);
@@ -17,15 +19,15 @@ function ShareButton(props) {
   };
 
   return (
-    <button
+    <div
       type="button"
       onClick={ () => { onclickHandle(); } }
     >
-      <img alt="share" data-testid={ datatestid } src={ shareIcon } />
+      <img className='shareConfig' alt="share" data-testid={ datatestid } src={ shareIcon } />
       <p>
         {copiedbutton ? <p>Link copiado!</p> : ''}
       </p>
-    </button>
+    </div>
   );
 }
 

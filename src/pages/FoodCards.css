@@ -2,5 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-bottom: 50px;
+}
+
+.avrilLavigne {
+  display: flex;
+  flex-direction: column;
+  border: solid black 10px;
 }

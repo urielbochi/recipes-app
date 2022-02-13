@@ -1,15 +1,19 @@
 .btn-cooked-recip {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px;
-  width: 360px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 200px;
+  margin-left: 90px;
+
+}
+
+.buttonPaddingBottom {
+  margin-bottom: 2px;
 }
 
 .image-recipes {
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  height: 140px;
   width: 140px;
+  object-fit: cover;
 }
 
 .p-cooked-recip {
@@ -18,19 +22,19 @@
 }
 
 .recip-card {
-  background-color: #00640059;
-  border-radius: 10px;
   display: flex;
   flex-flow: nowrap;
   flex-direction: row;
-  height: 140px;
   margin-left: 6px;
   margin-top: 6px;
   width: 347px;
+
+
 }
 
 .title-recip-cards {
   color: black;
+  margin-left: 15px;
 }
 
 .toptext-icon {

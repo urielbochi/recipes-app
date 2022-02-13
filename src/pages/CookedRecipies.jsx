@@ -33,18 +33,21 @@ function CookedRecipies() {
       <Header title="Receitas Feitas" />
       <div className="btn-cooked-recip">
         <Button
+          className='buttonPaddingBottom'
           onClick={ filterAll }
           data-testid="filter-by-all-btn"
         >
           All
         </Button>
         <Button
+          className='buttonPaddingBottom'
           data-testid="filter-by-food-btn"
           onClick={ () => filterType('comida') }
         >
           Food
         </Button>
         <Button
+          className='buttonPaddingBottom'
           data-testid="filter-by-drink-btn"
           onClick={ () => filterType('bebida') }
         >

@@ -1,22 +1,63 @@
-.body-details {
-  background-color: #0fa36b;
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@200&family=Hahmlet:wght@200&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto+Condensed:wght@300&display=swap');
 
-  /* box-sizing: border-box; */
-  margin-top: -90px;
+.body-details {
+  background-color: white;
   padding-bottom: 20px;
-  position: relative;
   width: 100%;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.detailsTitleContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffd000;
+  padding-bottom: 3px;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-bottom: 22px;
+}
+
+.titleColumnTest {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.titleRecipesConfig {
+  color: black;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.subTitleRecipesConfig {
+  font-size: 20px;
+}
+
+.buttonsFavoriteFlex {
+  display: flex;
+  height: 40px;
+}
+
+.subtitleFlexConfig {
+  display: flex;
+  flex-direction: column;
 }
 
 .button-details {
   bottom: 0;
   position: fixed;
   width: 100%;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 5px;
 }
 
-.title-details {
-  margin-top: -10px;
-  padding-left: 6px;
+.button-details:disabled {
+  opacity: 0.4;
 }
 
 .header-details {
@@ -32,19 +73,24 @@ iframe {
 }
 
 .imgtittle {
-  height: 180px;
   object-fit: cover;
   object-position: center;
   width: 100%;
 }
 
+.title-details {
+  color: rgb(63, 60, 60);
+}
+
+.title-instruct {
+  margin-top: 20px;
+}
 .ingredients {
-  background-color: #80808042;
-  border-radius: 10px;
+  background-color: #eee;
   display: flex;
   flex-flow: row wrap;
-  margin: 6px;
-  padding-left: 6px;
+  margin-bottom: 16px;
+  color: black;
 }
 
 .meals {

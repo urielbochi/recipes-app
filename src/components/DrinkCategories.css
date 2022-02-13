@@ -1,7 +1,13 @@
 .drink-category-button {
-  height: 55px;
-  margin-bottom: 6px;
-  width: 150px;
+  padding: 6px;
+  margin-left: 4px;
+  font-size: 13px;
+  width: 105px;
+  margin-bottom: 8px;
+  background-color: rgb(19, 9, 63);
+  border: solid rgb(16, 55, 92) 1px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .drink-category {
@@ -9,5 +15,4 @@
   flex-flow: wrap;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
 }

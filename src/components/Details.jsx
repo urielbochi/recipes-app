@@ -13,7 +13,7 @@ function Details(props) {
   const { Receita, DetailedRecipe, RecomendedRecipe, Id, InProgress } = props;
   if (InProgress) {
     return (
-      <InProgressMount data={ DetailedRecipe } />
+      <InProgressMount data={DetailedRecipe} />
     );
   }
 
@@ -22,41 +22,43 @@ function Details(props) {
       <img
         className="imgtittle"
         data-testid="recipe-photo"
-        src={ DetailedRecipe.img }
+        src={DetailedRecipe.img}
         alt="detalhes"
       />
-      <div className="header-details">
-        <h1 data-testid="recipe-title">{DetailedRecipe.tittle}</h1>
-        <div>
-          <ShareButton
-            type={ Receita }
-            id={ Id }
-            datatestid="share-btn"
-          />
-          <FavoriteButton
-            recipe={ DetailedRecipe }
-            id={ Id }
-            type={ Receita }
-            datatestid="favorite-btn"
-          />
-        </div>
-      </div>
-      <h3
-        className="title-details"
-        data-testid="recipe-category"
-      >
-        {DetailedRecipe.category}
+      <div className='detailsTitleContainer'>
+        <div className='titleColumnTest'>
+        <h1 className='titleRecipesConfig' data-testid="recipe-title">{DetailedRecipe.tittle}</h1>
+        <h4
+          className="subTitleRecipesConfig"
+          data-testid="recipe-category"
+        >
+          {DetailedRecipe.category}
 
-      </h3>
-      { DetailedRecipe && Receita === 'bebidas'
-        ? <h3 data-testid="recipe-category">{DetailedRecipe.type}</h3>
+        </h4>
+        {DetailedRecipe && Receita === 'bebidas'
+        ? <h3 className='subTitleRecipesConfig'>{DetailedRecipe.type}</h3>
         : null}
-      <h2 className="title-details">Ingredientes</h2>
+        </div>
+        <div className='buttonsFavoriteFlex'>
+        <ShareButton
+          type={Receita}
+          id={Id}
+          datatestid="share-btn"
+          />
+        <FavoriteButton
+          recipe={DetailedRecipe}
+          id={Id}
+          type={Receita}
+          datatestid="favorite-btn"
+          />
+          </div>
+        </div>
 
+      <h2 className="title-details">Ingredientes</h2>
       <div className="ingredients">
-        <ol>
-          <IngredientList array={ DetailedRecipe } />
-        </ol>
+        <ul>
+          <IngredientList array={DetailedRecipe} />
+        </ul>
       </div>
       <h2 className="title-details">Instruções</h2>
       <p
@@ -68,22 +70,22 @@ function Details(props) {
       </p>
       {
         Receita === 'comidas'
-          ? <iframe title="mov" data-testid="video" src={ DetailedRecipe.youlink } />
+          ? <iframe title="mov" data-testid="video" src={DetailedRecipe.youlink} />
           : null
       }
-      <h2 className="title-details" data-testid="1-recomendation-title">Recomendadas</h2>
+      <h2 className="title-details title-instruct" data-testid="1-recomendation-title">Recomendadas</h2>
       <div className="sugestions">
         {RecomendedRecipe && <RecomendList
-          list={ RecomendedRecipe }
-          type={ Receita }
-          id={ Id }
+          list={RecomendedRecipe}
+          type={Receita}
+          id={Id}
         />}
       </div>
-      <Link to={ `/${Receita}/${Id}/in-progress` }>
+      <Link to={`/${Receita}/${Id}/in-progress`}>
         <StartContinueDoneButton
-          id={ Id }
-          type={ Receita }
-          ingredients={ DetailedRecipe }
+          id={Id}
+          type={Receita}
+          ingredients={DetailedRecipe}
         />
       </Link>
     </div>
