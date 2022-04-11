@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { drinkRandomFetch } from "../redux/actions/actionDrink";
 import search from '../images/searching.png'

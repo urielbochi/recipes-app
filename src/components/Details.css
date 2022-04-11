@@ -16,6 +16,11 @@
     height: 91vh;
 }
 
+.ingredients__configurations {
+    list-style-type: none;
+
+}
+
 .details__column-title {
     margin-left: 10px;
     text-align: center;

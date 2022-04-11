@@ -81,7 +81,6 @@ function Details(props) {
             recipe={DetailedRecipe}
             id={Id}
             type={Receita}
-            datatestid="favorite-btn"
           />
         </div>
         </div>
