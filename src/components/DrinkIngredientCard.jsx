@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
-import './Card.css';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import React from "react";
+import PropTypes from "prop-types";
+import { Card } from "react-bootstrap";
+import "./Card.css";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import {
   drinkFilterByIngredientListFetch,
   drinkHandleClickIngredient,
-} from '../redux/actions/actionDrink';
+} from "../redux/actions/actionDrink";
+import "./Card.css";
+
 
 function DrinkIngredientCard({ title: { strIngredient1 }, index }) {
   const dispatch = useDispatch();
@@ -16,26 +18,31 @@ function DrinkIngredientCard({ title: { strIngredient1 }, index }) {
     dispatch(drinkFilterByIngredientListFetch(strIngredient1));
   };
 
+  const myCardStyle = {
+    color: "black",
+    fontFamily: "Juliana",
+    fontWeight: "900",
+    fontSize: "25px",
+  };
+
   return (
-    <Link to="/bebidas" onClick={ handleClick }>
-      <Card className="food-card" data-testid={ `${index}-ingredient-card` }>
+    <Link to="/bebidas" onClick={handleClick}>
+      <Card className="card__configuration-general">
         <Card.Img
-          className="food-card-img"
-          data-testid={ `${index}-card-img` }
-          src={ `https://www.thecocktaildb.com/images/ingredients/${strIngredient1}-Small.png` }
-          alt="foodandDrinkImages"
+          className="configuration-setted"
+          src={`https://www.thecocktaildb.com/images/ingredients/${strIngredient1}-Medium.png`}
         />
-        <Card.Title data-testid={ `${index}-card-name` }>
-          { strIngredient1 }
-        </Card.Title>
+        <Card.Body>
+          <Card.Title style={myCardStyle}>{strIngredient1}</Card.Title>
+        </Card.Body>
       </Card>
     </Link>
   );
 }
 
-DrinkIngredientCard.propTypes = ({
+DrinkIngredientCard.propTypes = {
   item: PropTypes.objectOf(PropTypes.string),
   index: PropTypes.number,
-}).isRequired;
+}.isRequired;
 
 export default DrinkIngredientCard;

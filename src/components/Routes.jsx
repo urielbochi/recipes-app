@@ -10,7 +10,7 @@ import FoodPerIngredient from '../pages/FoodPerIngredient';
 import DrinkPerIngredient from '../pages/DrinkPerIngredient';
 import ExplorePerArea from '../pages/ExplorePerArea';
 import Profile from '../pages/Profile';
-import CookedRecipies from '../pages/CookedRecipies';
+import CookedRecipies from '../pages/CookedRecipes';
 import FavoriteRecipies from '../pages/FavoriteRecipies';
 import RecipeDetails from '../pages/RecipeDetails';
 import InProgressRecipe from '../pages/InProgressRecipe';

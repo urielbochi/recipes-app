@@ -11,6 +11,7 @@ import {
 } from '../redux/actions/actionFood';
 import './FoodCards.css';
 import './Explore.css';
+import './ExplorePerArea.css'
 
 function ExplorePerArea() {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ function ExplorePerArea() {
 
   return (
     <>
-      <Header title="Explorar Origem" />
+      <Header title="Discover by Origin" />
       <div className="select-expl">
         <select data-testid="explore-by-area-dropdown" onChange={ handleChange }>
           <option data-testid="All-option" value="All">All</option>
@@ -47,13 +48,12 @@ function ExplorePerArea() {
             </option>)) }
         </select>
       </div>
-      <div className="map-cards">
+      <div className="explore__origin-container">
         {foodPerAreaFilter.map((item, index) => (
           <Link to={ `/comidas/${item.idMeal}` } key={ item.idMeal }>
             <FoodCard food={ item } index={ index } />
           </Link>))}
       </div>
-      <Footer />
     </>
   );
 }

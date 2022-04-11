@@ -25,23 +25,23 @@ export default function FoodCategories() {
     }
   };
   return (
-    <div className="food-category">
-      <Button
+    <div className="d-flex f-wrap m-y-1 j-c-center a-i-center">
+      <button
         data-testid="All-category-filter"
         className="category-button"
         onClick={ withoutFilter }
       >
         All
-      </Button>
+      </button>
       {foodCategoriesList.map((category) => (
-        <Button
+        <button
           data-testid={ `${category.strCategory}-category-filter` }
           className="category-button"
           key={ category.strCategory }
           onClick={ () => filterByCategory(category.strCategory) }
         >
           {category.strCategory}
-        </Button>
+        </button>
       ))}
     </div>
   );

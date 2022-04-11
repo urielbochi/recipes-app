@@ -4,19 +4,26 @@ import { Card } from 'react-bootstrap';
 import './Card.css';
 
 function FoodCard({ food: { strMeal, strMealThumb }, index }) {
+  const myCardStyle = {
+    color: 'black',
+    fontFamily: 'Juliana',
+    fontWeight: '900',
+    fontSize: '25px',
+  }
   return (
-    <Card className="food-card" data-testid={ `${index}-recipe-card` }>
+    <Card className='card__configuration-general'>
       <Card.Img
-        className="food-card-img"
-        data-testid={ `${index}-card-img` }
+        className="configuration-setted"
+        data-testid={`${index}-card-img`}
         src={ strMealThumb }
         alt="foodandDrinkImages"
       />
-      <Card.Title data-testid={ `${index}-card-name` }>
-        { strMeal }
-      </Card.Title>
+      <Card.Body>
+        <Card.Title style={myCardStyle}>{ strMeal }</Card.Title>
+      </Card.Body>
     </Card>
   );
+
 }
 
 FoodCard.propTypes = ({

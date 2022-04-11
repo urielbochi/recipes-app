@@ -2,10 +2,10 @@
   padding: 6px;
   margin-left: 4px;
   font-size: 13px;
-  width: 105px;
+  width: 200px;
   margin-bottom: 8px;
-  background-color: rgb(19, 9, 63);
-  border: solid rgb(16, 55, 92) 1px;
+  background-color: black;
+  border: none;
   color: white;
   font-family: 'Poppins', sans-serif;
 }
@@ -15,4 +15,13 @@
   flex-flow: wrap;
   flex-direction: row;
   justify-content: space-between;
+}
+
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 499px) {
+    .drink-category-button {
+      width: 150px;
+    }
+  }
 }

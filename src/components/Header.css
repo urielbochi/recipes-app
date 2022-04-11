@@ -1,24 +1,69 @@
 .buttons {
-  background-color: transparent;
   border: none;
   margin-top: 5px;
 }
 
 .header {
-  background-color: #8b7fc5b8;
+  background-color: #f4f4f4 ;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-bottom: 5px;
+  justify-content: space-between;
   padding-top: 5px;
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 1;
 }
 
 .title {
+  font-family: Juliana;
+  font-weight: 200;
   font-size: 2rem;
+  margin-right: 60px;
   margin-top: 5px;
-  color: white;
+  color: black;
+}
+
+
+.navbar__logo-font {
+  font-family: Lilian;
+  margin-left: 10px;
+}
+
+.navbar__made{
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+.navbar__logo-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title__config {
+  display: flex;
+}
+
+.navbar__profile-search {
+  display: flex;
+}
+
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 499px) {
+    .title {
+      width: 10rem;
+      font-size: 25px;
+      margin-top: 5px;
+      margin-left: 30px;
+    }
+    .navbar__logo-font {
+      font-size: 25px;
+      margin-top: 5px;
+      
+    }
+    .title {
+      display: none;
+
+    }
+   
+  }
 }

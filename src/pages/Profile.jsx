@@ -18,44 +18,44 @@ function Profile() {
   };
   return (
     <>
-      <Header title="Perfil" />
+    <div className='profile__headpadding'>
+      <Header title="Profile" />
+      </div>
       <div className="profile-container">
         <h3
           className="profile-email"
           data-testid="profile-email"
         >
-          { renderUser.email }
+         We are happy to see you back there { renderUser.email }
 
         </h3>
         <Link to="receitas-feitas">
-          <Button
-            data-testid="profile-done-btn"
-            className="group-button-profile"
+          <button
+            className="general-profile-button"
           >
-            Receitas Feitas
+            Done recipes
 
-          </Button>
+          </button>
         </Link>
         <Link to="receitas-favoritas">
-          <Button
+          <button
             data-testid="profile-favorite-btn"
-            className="group-button-profile"
+            className="general-profile-button"
           >
-            Receitas Favoritas
+            My favorite Recipes
 
-          </Button>
+          </button>
         </Link>
-        <Link to="/">
-          <Button
-            className="group-button-profile"
+        <Link to="/recipes-app">
+          <button
+            className="general-profile-button"
             data-testid="profile-logout-btn"
             onClick={ handleLocalStorage }
           >
-            Sair
-          </Button>
+            Logout
+          </button>
         </Link>
       </div>
-      <Footer />
     </>
   );
 }

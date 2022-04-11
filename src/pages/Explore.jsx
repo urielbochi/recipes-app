@@ -1,37 +1,38 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import './Explore.css';
+import React from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import "./Explore.css";
+import discover from '../images/discover.png'
 
 function Explore() {
   return (
     <>
-      <Header title="Explorar" />
+      <div className="explore__header-general-padding">
+        <Header title="Discover" />
+      </div>
       <div className="explore">
+        <img className="explore__discover-general" src={discover} />
+        <h1 className="seeking__h1-title">Seeking for something specific?</h1>
         <Link to="/explorar/comidas">
-          <Button
-            className="btn-explore"
-            data-testid="explore-food"
+          <button
+            className="button__explore-ingredients"
             type="button"
           >
-            Explorar Comidas
-
-          </Button>
+            Explore food
+          </button>
         </Link>
         <Link to="/explorar/bebidas">
-          <Button
-            className="btn-explore"
+          <button
+            className="button__explore-ingredients"
             data-testid="explore-drinks"
             type="button"
           >
-            Explorar Bebidas
-
-          </Button>
+            Explore cocktails
+          </button>
         </Link>
       </div>
-      <Footer />
     </>
   );
 }

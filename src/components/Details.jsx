@@ -1,93 +1,106 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import ShareButton from './ShareButton';
-import FavoriteButton from './FavoriteButton';
-import StartContinueDoneButton from './StartContinueDoneButton';
-import IngredientList from './IngredientList';
-import RecomendList from './RecomendList';
-import InProgressMount from './InProgressMount';
-import '../pages/RecipeDetails.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import ShareButton from "./ShareButton";
+import FavoriteButton from "./FavoriteButton";
+import StartContinueDoneButton from "./StartContinueDoneButton";
+import IngredientList from "./IngredientList";
+import RecomendList from "./RecomendList";
+import InProgressMount from "./InProgressMount";
+import makeOwn from "../images/drinkMake.png";
+import "./Details.css";
+import need from "../images/need.png";
+import prepar from "../images/prepar.png";
+
+import Header from "./Header";
 
 function Details(props) {
   const { Receita, DetailedRecipe, RecomendedRecipe, Id, InProgress } = props;
   if (InProgress) {
-    return (
-      <InProgressMount data={DetailedRecipe} />
-    );
+    return <InProgressMount data={DetailedRecipe} />;
   }
 
   return (
-    <div className="body-details">
-      <img
-        className="imgtittle"
-        data-testid="recipe-photo"
-        src={DetailedRecipe.img}
-        alt="detalhes"
-      />
-      <div className='detailsTitleContainer'>
-        <div className='titleColumnTest'>
-        <h1 className='titleRecipesConfig' data-testid="recipe-title">{DetailedRecipe.tittle}</h1>
-        <h4
-          className="subTitleRecipesConfig"
-          data-testid="recipe-category"
-        >
-          {DetailedRecipe.category}
-
-        </h4>
-        {DetailedRecipe && Receita === 'bebidas'
-        ? <h3 className='subTitleRecipesConfig'>{DetailedRecipe.type}</h3>
-        : null}
-        </div>
-        <div className='buttonsFavoriteFlex'>
-        <ShareButton
-          type={Receita}
-          id={Id}
-          datatestid="share-btn"
-          />
-        <FavoriteButton
-          recipe={DetailedRecipe}
-          id={Id}
-          type={Receita}
-          datatestid="favorite-btn"
-          />
+    <div>
+      <div className="deixemeempaz">
+        <Header />
+      </div>
+      <div className="details__image-title">
+        <h1 className="titleRecipesConfig" data-testid="recipe-title">
+          {DetailedRecipe.tittle}
+        </h1>
+        <img
+          className="imgtittle"
+          data-testid="recipe-photo"
+          src={DetailedRecipe.img}
+          alt="detalhes"
+        />
+        <div>
+          <div className="details__column-title">
+            <h4 className="subTitleRecipesConfig" data-testid="recipe-category">
+              {DetailedRecipe.category}
+            </h4>
+            {DetailedRecipe && Receita === "bebidas" ? (
+              <h3 className="subTitleRecipesConfig">{DetailedRecipe.type}</h3>
+            ) : null}
           </div>
         </div>
+      </div>
 
-      <h2 className="title-details">Ingredientes</h2>
-      <div className="ingredients">
-        <ul>
+      <div className="details__ingredients-container">
+        <img src={need} />
+        <h2 className="title__ingredients-list">You gonna need...</h2>
+        <ul className="details__ingredients-list">
           <IngredientList array={DetailedRecipe} />
         </ul>
       </div>
-      <h2 className="title-details">Instruções</h2>
-      <p
-        className="ingredients"
-        data-testid="instructions"
-      >
-        {DetailedRecipe.Instructions}
 
-      </p>
-      {
-        Receita === 'comidas'
-          ? <iframe title="mov" data-testid="video" src={DetailedRecipe.youlink} />
-          : null
-      }
-      <h2 className="title-details title-instruct" data-testid="1-recomendation-title">Recomendadas</h2>
+      <div className="details__ingredients-container">
+        <img src={prepar} />
+        <h2 className="title__ingredients-list">Get to work</h2>
+        <div className="get__ready-cook">
+          <p className="ingredients__configurations">
+            {DetailedRecipe.Instructions}
+          </p>
+        </div>
+        {/* {Receita === "comidas" ? (
+          <iframe title="mov" src={DetailedRecipe.youlink} />
+        ) : null} */}
+      </div>
+      <div className="cocktail-row">
+        <img className="make__own-image" src={makeOwn} />
+        <div className="cocktail-column">
+          <h6 className="description__make-own">MAKE ON YOUR OWN</h6>
+          <p className="description__text-field">
+            Our chefs made the recipe in the most affordable way for you to make
+            it at home.
+          </p>
+          <div className="share-favorite__config">
+         <ShareButton type={Receita} id={Id} datatestid="share-btn" />
+          <FavoriteButton
+            recipe={DetailedRecipe}
+            id={Id}
+            type={Receita}
+            datatestid="favorite-btn"
+          />
+        </div>
+        </div>
+      </div>
+      <div className="chef__favorites">
+        <h2 className="title__chef-favorites">To Whom It May Concern</h2>
+      </div>
       <div className="sugestions">
-        {RecomendedRecipe && <RecomendList
-          list={RecomendedRecipe}
-          type={Receita}
-          id={Id}
-        />}
+        {RecomendedRecipe && (
+          <RecomendList list={RecomendedRecipe} type={Receita} id={Id} />
+        )}
       </div>
       <Link to={`/${Receita}/${Id}/in-progress`}>
-        <StartContinueDoneButton
-          id={Id}
-          type={Receita}
-          ingredients={DetailedRecipe}
-        />
-      </Link>
+          <StartContinueDoneButton
+            id={Id}
+            type={Receita}
+            ingredients={DetailedRecipe}
+          />
+        </Link>
     </div>
   );
 }

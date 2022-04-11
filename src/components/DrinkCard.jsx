@@ -1,27 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
-import './Card.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { Card } from "react-bootstrap";
+import "./Card.css";
 
 function DrinkCard({ drink: { strDrink, strDrinkThumb }, index }) {
+  const myCardStyle = {
+    color: 'black',
+    fontFamily: 'Juliana',
+    fontWeight: '900',
+    fontSize: '25px',
+  }
   return (
-    <Card className="food-card" data-testid={ `${index}-recipe-card` }>
+    <Card className='card__configuration-general'>
       <Card.Img
-        className="food-card-img"
-        data-testid={ `${index}-card-img` }
-        src={ strDrinkThumb }
+        className="configuration-setted"
+        data-testid={`${index}-card-img`}
+        src={strDrinkThumb}
         alt="foodandDrinkImages"
       />
-      <Card.Title data-testid={ `${index}-card-name` }>
-        { strDrink }
-      </Card.Title>
+      <Card.Body>
+        <Card.Title style={myCardStyle}>{strDrink}</Card.Title>
+      </Card.Body>
     </Card>
   );
 }
 
-DrinkCard.propTypes = ({
+DrinkCard.propTypes = {
   item: PropTypes.objectOf(PropTypes.string),
   index: PropTypes.number,
-}).isRequired;
+}.isRequired;
 
 export default DrinkCard;

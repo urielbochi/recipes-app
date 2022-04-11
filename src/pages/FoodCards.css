@@ -1,11 +1,87 @@
-.map-cards {
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Lora:wght@400;500&family=Roboto:wght@100&family=Space+Grotesk:wght@300&display=swap');
+
+.drinks__order {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  column-gap: 40px;
+  margin-right: 20px;
 }
 
-.avrilLavigne {
+.food__order-background {
+  background-color: #FAFAFA;
+}
+
+.main__drink-carousel {
+  margin-top: 20px;
+  width: 100vh;
+  height: 75vh;
+  object-fit: cover;
+
+}
+
+.general__cards-images {
+  width: 40vh;
+  object-fit: cover;
+}
+
+.drink__carousel-right {
   display: flex;
-  flex-direction: column;
-  border: solid black 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: black;
+}
+
+.drink__fullblack {
+  width: 100vh;
+
+}
+
+.text-absolute__config {
+  color: white;
+  font-family: Juliana;
+  margin-top: 200px;
+  font-size: 6.5rem;
+  right: 40%;
+  top: 120px;
+  position: absolute;
+  letter-spacing: 1px;
+}
+
+
+@media only screen and (min-width: 950px) {
+  @media only screen and (max-width: 1800px) {
+    .text-absolute__config {
+      top: 120px;
+      width: 900px;
+      left: 10%;
+    }
+  }
+}
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 649px) {
+    .text-absolute__config {
+      display: none;
+    }
+   .main__drink-carousel {
+     width: 100%;
+     box-shadow: inset 0 0 10px #000000;
+   }
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  @media only screen and (max-width: 949px) {
+    .text-absolute__config {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      position: relative;
+      top: 50px;
+      left: -70px;
+    }
+  }
 }

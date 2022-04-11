@@ -2,12 +2,18 @@
   padding: 6px;
   margin-left: 4px;
   font-size: 13px;
-  width: 105px;
+  width: 130px;
   margin-bottom: 8px;
-  background-color: rgb(19, 9, 63);
-  border: solid rgb(16, 55, 92) 1px;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
   color: white;
   font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+.category-button:hover {
+  background-color: #d9c4a9;
 }
 
 .food-card {

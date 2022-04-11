@@ -4,12 +4,11 @@
 }
 
 .footer {
-  background-color: #8b7fc5b8;
+  background-color: #f4f4f4;
   bottom: 0;
   display: flex;
   justify-content: space-around;
   padding-bottom: 5px;
   padding-top: 5px;
-  position: fixed;
   width: 100%;
 }

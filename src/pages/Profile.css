@@ -13,7 +13,35 @@
 
 .profile-email {
   align-self: center;
-  color: white;
+  color: black;
   margin-bottom: 30px;
   margin-top: 30px;
+  width: 500px;
+  text-align: center;
+  font-family: Pepe;
+}
+
+.general-profile-button {
+  background-color: #d88b79;
+  font-family: Pepe;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+
+.profile__headpadding {
+  padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 499px) {
+    .profile-email {
+      width: 90%;
+    }
+  }
 }

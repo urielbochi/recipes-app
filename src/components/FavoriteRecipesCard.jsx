@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import ShareButton from './ShareButton';
 import FavoriteButton from './FavoriteButton';
-import './CookedAndFavoriteCard.css';
-import '../pages/CookedRecipies.css';
+import './CookedRecipesCard.css';
+import '../pages/CookedRecipes.css'
+
 
 export default function FavoriteRecipesCard({
   index,
@@ -18,29 +19,22 @@ export default function FavoriteRecipesCard({
   id,
 }) {
   return (
-    <Card className="recip-card">
-      <Link to={ `/${type}s/${id}` }>
-        <Card.Img
-          data-testid={ `${index}-horizontal-image` }
-          src={ image }
-          alt="foto-da-api-"
-          className="image-recipes"
-        />
+    <div className="cooked-recipes__flex">
+    <Link to={`/${type}s/${id}`}>
+      <img src={image} alt="foto-da-api-" className="cooke-recipes__image-config" />
+    </Link>
+    <div className="cooked-recipes__flex-column">
+      <Link to={`/${type}s/${id}`}>
+        <h1 className="done__recipes--title">{name}</h1>
       </Link>
-      <div>
-        <p data-testid={ `${index}-horizontal-top-text` }>
-          { alcoholicOrNot }
-          { `${area} - ${category}` }
-        </p>
-        <Link to={ `/${type}s/${id}` }>
-          <Card.Title
-            className="title-recip-cards"
-            data-testid={ `${index}-horizontal-name` }
-          >
-            { name }
-          </Card.Title>
-        </Link>
-        <div className="toptext-icon">
+      <p
+        className="done__recipes--subtitles"
+        data-testid={`${index}-horizontal-top-text`}
+      >
+        {alcoholicOrNot}
+        {`${area} - ${category}`}
+      </p>
+      <div className="toptext-icon">
           <ShareButton
             datatestid={ `${index}-horizontal-share-btn` }
             id={ id }
@@ -53,14 +47,16 @@ export default function FavoriteRecipesCard({
             datatestid={ `${index}-horizontal-favorite-btn` }
           />
         </div>
-        <p>
-          { alcoholicOrNot }
-        </p>
-      </div>
-    </Card>
-
-  );
+    </div>
+  </div>
+);
 }
+    
+
+
+
+
+
 
 FavoriteRecipesCard.propTypes = ({
   index: PropTypes.number,

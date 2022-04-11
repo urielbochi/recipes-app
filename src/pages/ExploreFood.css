@@ -1,0 +1,16 @@
+.explore__food-header-padding {
+    padding-bottom: 100px;
+}
+
+
+@media only screen and (min-width: 200px) {
+    @media only screen and (max-width: 900px) {
+      .explore-image-general-config {
+        width: 100%;
+      }
+      .discover__food-h1-title {
+          text-align: center;
+      }
+     
+    }
+  }

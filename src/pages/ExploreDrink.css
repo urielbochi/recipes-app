@@ -1,3 +1,67 @@
 .exploredrink {
   display: flex;
 }
+
+
+.explore__column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explore__header-padding {
+  padding-bottom: 50px;
+}
+
+
+.explore-image-general-config {
+  margin-bottom: 30px;
+  width: 100vh;
+}
+
+
+.button__explore-ingredients {
+  min-width: 190px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-family: Iskry;
+  font-size: 20px;
+  background-size: 120% auto;
+  background-color: #a67564
+
+  ;
+}
+.button__explore-ingredients:hover {
+  background-position: right center;
+}
+.button__explore-ingredients:active {
+  top: 2px;
+}
+
+.discover__food-h1-title {
+  font-family: Pepe;
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 499px) {
+    .explore-image-general-config {
+      width: 100%;
+    }
+    .explore__header-padding {
+      padding-bottom: 100px;
+    }
+   
+  }
+}

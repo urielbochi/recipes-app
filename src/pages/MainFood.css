@@ -1,0 +1,129 @@
+.food__logo {
+  width: 100vh  ;
+  margin-top: 100px;
+}
+
+.main__food-logo-config {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.main__food-subclass-adjust {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  width: 400px;
+}
+
+.chef__secrets {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Catamaran, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 1.714em;
+  color: #ac8d5b;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: -30px;
+}
+
+.main__food-description {
+    font-family: "Lora", serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    font-size: 4vh;
+    width: 90%;
+    line-height: 1.285em;
+    margin: 25px 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+.main__food-recipes-title {
+  text-align: center;
+  font-size: 60px;
+  font-family: Lora;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+    @media only screen and (max-width: 1359px) {
+        .food__logo {
+            width: 80vh;
+        }
+     
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    @media only screen and (max-width: 999px) {
+        .food__logo {
+            width: 65vh;
+        }
+        .main__food-description {
+            font-size: 2.5vh;
+            word-wrap: break-word;
+            width: 90%;
+
+        }
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    @media only screen and (max-width: 799px) {
+        .food__logo {
+            width: 80vh;
+        }
+        .main__food-logo-config {
+            flex-direction: column;
+        }
+        .main__food-description {
+            font-size: 3vh;
+            width: 100%;
+        }
+        .chef__secrets {
+         margin-top: 10px;
+        }
+        .main__food-subclass-adjust {
+            display: flex;
+            justify-content: center;
+            margin-left: 200px;
+        }
+    }
+  }
+
+  @media only screen and (min-width: 200px) {
+    @media only screen and (max-width: 499px) {
+        .food__logo {
+            width: 45vh;
+            margin-top: 200px;
+        }
+        .main__food-logo-config {
+            flex-direction: column;
+        }
+        .main__food-description {
+            font-size: 3vh;
+            width: 90%;
+        }
+        .chef__secrets {
+         margin-top: 10px;
+         width: 200px;
+        }
+        .main__food-subclass-adjust {
+            display: flex;
+            align-items: center;
+            text-align: right;
+            width: 90%;
+        }
+    }
+  }
+
+
+

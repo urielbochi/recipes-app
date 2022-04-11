@@ -19,7 +19,10 @@ function FoodPerIngredient() {
   }
   return (
     <>
-      <Header title="Explorar Ingredientes" />
+       <div className="drinkPerIngredient__padding-bottom">
+        <Header title="Explore by Ingredients" />
+      </div>
+      <div className="drinks__order">
       {foodIngredientList.map((item, index) => (
         <FoodIngredientCard
           key={ item.strIngredient }
@@ -27,7 +30,7 @@ function FoodPerIngredient() {
           index={ index }
         />
       ))}
-      <Footer />
+      </div>
     </>
   );
 }

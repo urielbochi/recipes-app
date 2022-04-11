@@ -1,0 +1,31 @@
+.cooked-recipes__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-wrap: wrap;
+}
+
+.cooked-recipes__flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.cooke-recipes__image-config {
+    width: 30vh;
+}
+
+.done__recipes--title {
+    color: black;
+    text-decoration: none;
+    font-family: Pepe;
+}
+
+.done__recipes--subtitles {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: Pepe;
+  }

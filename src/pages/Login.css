@@ -1,22 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@200&family=Hahmlet:wght@200&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto+Condensed:wght@300&display=swap');
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-}
 
 .form-group {
+  width: 300px;
   color: white;
-  display: flex;
+  margin-left: 145px;
 }
 
 .login-button {
-  width: 320px;
+  width: 300px;
+  height: 40px;
+  color: white;
+  background-color: #1a1b1f; /* Gre10 */
+  border-radius: 10px;
+}
+/* 
+.form__backgground {
+  background-color: white;
+  height: 300px;
+} */
+
+.login__title-recipes {
+  color: white;
+  font-weight: 400;
+  font-size: 150px;
+  font-family: Lilian;
 }
 
-.title {
-  font-family: 'Poppins', sans-serif;
-  color: rgb(246, 201, 0);
-  font-weight: bolder;
-  
+.login__input-configuration {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login__general-container {
+  background-image: url('../images/29228_food.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  box-shadow: inset 0 0 0 5000px rgba(0, 0, 0, 0.2);
+}
+
+.login__general-configurations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login__minimal-title {
+  font-family: Ariel;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+  position: absolute;
+}
+
+.login__subtitle-minimal {
+  font-family: Ariel;
+  color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+
+  font-weight: 400;
+  text-align: right;
+  margin-top: -30px;
+}
+
+
+@media only screen and (min-width: 200px) {
+  @media only screen and (max-width: 499px) {
+    .form-group  {
+      margin-left: 0;
+    }
+    .login__minimal-title {
+      margin-top: -4px;
+      font-size: 10px;
+    }
+    .login__subtitle-minimal {
+      font-size: 10px;
+    }
+    .login__title-recipes {
+      font-size: 80px;
+    }
+    .login__general-container {
+      height: 100%;
+    }
+   
+  }
 }

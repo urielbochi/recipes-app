@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import DrinkIngredientCard from '../components/DrinkIngredientCard';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import { drinkIngredientsListFetch } from '../redux/actions/actionDrink';
-import './FoodCards.css';
-import './Explore.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import DrinkIngredientCard from "../components/DrinkIngredientCard";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import { drinkIngredientsListFetch } from "../redux/actions/actionDrink";
+import "./FoodCards.css";
+import "./Explore.css";
+import "./MainFood.css";
 
 function DrinkPerIngredient() {
   const dispatch = useDispatch();
@@ -14,25 +15,27 @@ function DrinkPerIngredient() {
     dispatch(drinkIngredientsListFetch());
   }, [dispatch]);
 
-  const drinkIngredientsList = useSelector(({ drinkReducer }) => (
-    drinkReducer.drinkIngredientsList));
+  const drinkIngredientsList = useSelector(
+    ({ drinkReducer }) => drinkReducer.drinkIngredientsList
+  );
 
   if (drinkIngredientsList === []) {
     return <p>loading...</p>;
   }
   return (
     <>
-      <Header title="Explorar Ingredientes" />
-      <div className="fix-top map-cards">
+      <div className="drinkPerIngredient__padding-bottom">
+        <Header title="Explorar Ingredientes" />
+      </div>
+      <div className="drinks__order">
         {drinkIngredientsList.map((item, index) => (
           <DrinkIngredientCard
-            key={ item.strIngredient1 }
-            title={ item }
-            index={ index }
+            key={item.strIngredient1}
+            title={item}
+            index={index}
           />
         ))}
       </div>
-      <Footer />
     </>
   );
 }

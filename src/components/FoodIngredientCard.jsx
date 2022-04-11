@@ -16,21 +16,29 @@ function FoodIngredientCard({ title: { strIngredient }, index }) {
     dispatch(foodFilterByIngredientListFetch(strIngredient));
   };
 
+  const myCardStyle = {
+    color: "black",
+    fontFamily: "Juliana",
+    fontWeight: "900",
+    fontSize: "25px",
+  };
+
   return (
     <Link to="/comidas" onClick={ handleClick }>
-      <Card data-testid={ `${index}-ingredient-card` }>
-        <Card.Img
-          data-testid={ `${index}-card-img` }
-          src={ `https://www.themealdb.com/images/ingredients/${strIngredient}-Small.png` }
-          alt="foodandDrinkImages"
-        />
-        <Card.Title data-testid={ `${index}-card-name` }>
-          { strIngredient }
-        </Card.Title>
-      </Card>
+    <Card className="card__configuration-general">
+      <Card.Img
+        className="configuration-setted"
+        src={`https://www.themealdb.com/images/ingredients/${strIngredient}-Small.png`}
+      />
+      <Card.Body>
+        <Card.Title style={myCardStyle}>{strIngredient}</Card.Title>
+      </Card.Body>
+    </Card>
     </Link>
-  );
-}
+    )
+    }
+    
+
 
 FoodIngredientCard.propTypes = ({
   item: PropTypes.objectOf(PropTypes.string),

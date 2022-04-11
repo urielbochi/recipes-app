@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './RecomendList.css'
 
 const RecomendListHandle = (array, type) => {
   const recomendlegth = 6;
@@ -9,16 +10,16 @@ const RecomendListHandle = (array, type) => {
     const obj = array.drinks.map((n, index) => (
       <Link key={ index } to={ `/bebidas/${n.idDrink}` }>
         <div
-          className="RecommendCard"
+          className="commend__list-container"
           data-testid={ `${index}-recomendation-card` }
         >
+          <img className="commend__image" alt="recomendamos!" src={ n.strDrinkThumb } />
           <p
             data-testid={ `${index}-recomendation-title` }
             className="recipeName"
           >
             {n.strDrink}
           </p>
-          <img className="RecomendImg" alt="recomendamos!" src={ n.strDrinkThumb } />
         </div>
 
       </Link>
@@ -29,16 +30,16 @@ const RecomendListHandle = (array, type) => {
     const obj = array.meals.map((n, index) => (
       <Link key={ index } to={ `/comidas/${n.idMeal}` }>
         <div
-          className="RecommendCard"
+          className="commend__list-container"
           data-testid={ `${index}-recomendation-card` }
         >
+          <img className="commend__image" alt="recomendamos!" src={ n.strMealThumb } />
           <p
             data-testid={ `${index}-recomendation-title` }
             className="recipeName"
           >
             {n.strMeal}
           </p>
-          <img className="RecomendImg" alt="recomendamos!" src={ n.strMealThumb } />
         </div>
       </Link>
     ));
