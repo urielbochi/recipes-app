@@ -43,12 +43,19 @@ function Details(props) {
             {DetailedRecipe && Receita === "bebidas" ? (
               <h3 className="subTitleRecipesConfig">{DetailedRecipe.type}</h3>
             ) : null}
+            <Link to={`/${Receita}/${Id}/in-progress`}>
+          <StartContinueDoneButton
+            id={Id}
+            type={Receita}
+            ingredients={DetailedRecipe}
+          />
+        </Link>
           </div>
         </div>
       </div>
 
       <div className="details__ingredients-container">
-        <img src={need} />
+        <img className="mobile-image__configuration" src={need} />
         <h2 className="title__ingredients-list">You gonna need...</h2>
         <ul className="details__ingredients-list">
           <IngredientList array={DetailedRecipe} />
@@ -68,7 +75,7 @@ function Details(props) {
         ) : null} */}
       </div>
       <div className="cocktail-row">
-        <img className="make__own-image" src={makeOwn} />
+        <img className="make__own-image mobile-image__configuration" src={makeOwn} />
         <div className="cocktail-column">
           <h6 className="description__make-own">MAKE ON YOUR OWN</h6>
           <p className="description__text-field">
@@ -93,13 +100,6 @@ function Details(props) {
           <RecomendList list={RecomendedRecipe} type={Receita} id={Id} />
         )}
       </div>
-      <Link to={`/${Receita}/${Id}/in-progress`}>
-          <StartContinueDoneButton
-            id={Id}
-            type={Receita}
-            ingredients={DetailedRecipe}
-          />
-        </Link>
     </div>
   );
 }

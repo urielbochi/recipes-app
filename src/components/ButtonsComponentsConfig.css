@@ -1,0 +1,18 @@
+.finish-button__in-progress {
+    width: 150px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-family: Pepe;
+}
+
+.finish-button__in-progress:disabled {
+    opacity: 0.5;
+}
+
+.finish-button__in-progress:hover {
+    background-color: rgb(148, 97, 89);
+    transition: 0.5s;
+}
+

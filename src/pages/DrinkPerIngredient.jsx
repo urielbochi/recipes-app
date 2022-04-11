@@ -25,7 +25,7 @@ function DrinkPerIngredient() {
   return (
     <>
       <div className="drinkPerIngredient__padding-bottom">
-        <Header title="Explorar Ingredientes" />
+        <Header title="Explore by Ingredients" />
       </div>
       <div className="drinks__order">
         {drinkIngredientsList.map((item, index) => (

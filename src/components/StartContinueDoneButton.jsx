@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ProgressValidation from '../services/recipeProgress';
 import SetInProgress, { setDone } from '../services/InProgressDoneHandle';
+import './ButtonsComponentsConfig.css'
 
 const disabletest = (ID, INGREDIENTS) => {
   const storageGet = JSON.parse(localStorage.getItem('InProgressIds'));
@@ -24,10 +25,10 @@ const ContRec = (id, type, ingredients) => {
     <button
       type="button"
       data-testid="start-recipe-btn"
-      className="button-details"
+      className="finish-button__in-progress"
       onClick={ () => SetInProgress(id, type, ingredients) }
     >
-      Continuar Receita
+      Continue Recipe
     </button>
   );
   return obj;
@@ -37,10 +38,10 @@ const StartRec = (id, type, ingredients) => {
     <button
       type="button"
       data-testid="start-recipe-btn"
-      className="button-details"
+      className="finish-button__in-progress"
       onClick={ () => SetInProgress(id, type, ingredients) }
     >
-      Iniciar Receita
+      Start recipe
     </button>
   );
   return obj;
@@ -51,11 +52,11 @@ const DoneRec = (id, type, ingredients) => {
     <button
       type="button"
       data-testid="finish-recipe-btn"
-      className="button-details"
+      className="finish-button__in-progress"
       disabled={ disabletest(id, ingredients) }
       onClick={ () => setDone(id, type, ingredients) }
     >
-      Finalizar Receita
+      End recipe
     </button>
   );
   return obj;
