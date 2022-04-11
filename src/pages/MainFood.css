@@ -102,8 +102,10 @@
   @media only screen and (min-width: 200px) {
     @media only screen and (max-width: 499px) {
         .food__logo {
-            width: 45vh;
-            margin-top: 200px;
+            width: 55vh;
+            margin-top: 100px;
+            margin-bottom: 30px;
+
         }
         .main__food-logo-config {
             flex-direction: column;
