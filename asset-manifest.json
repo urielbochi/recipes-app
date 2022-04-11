@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/recipes-app/static/css/main.6505dfbf.chunk.css",
-    "main.js": "/recipes-app/static/js/main.be513370.chunk.js",
-    "main.js.map": "/recipes-app/static/js/main.be513370.chunk.js.map",
+    "main.css": "/recipes-app/static/css/main.587bbbb9.chunk.css",
+    "main.js": "/recipes-app/static/js/main.b741e012.chunk.js",
+    "main.js.map": "/recipes-app/static/js/main.b741e012.chunk.js.map",
     "runtime-main.js": "/recipes-app/static/js/runtime-main.60965406.js",
     "runtime-main.js.map": "/recipes-app/static/js/runtime-main.60965406.js.map",
     "static/css/2.fa6c921b.chunk.css": "/recipes-app/static/css/2.fa6c921b.chunk.css",
-    "static/js/2.d47e0ef8.chunk.js": "/recipes-app/static/js/2.d47e0ef8.chunk.js",
-    "static/js/2.d47e0ef8.chunk.js.map": "/recipes-app/static/js/2.d47e0ef8.chunk.js.map",
+    "static/js/2.1b4b4ae5.chunk.js": "/recipes-app/static/js/2.1b4b4ae5.chunk.js",
+    "static/js/2.1b4b4ae5.chunk.js.map": "/recipes-app/static/js/2.1b4b4ae5.chunk.js.map",
     "index.html": "/recipes-app/index.html",
-    "precache-manifest.e5e58dd6c7b6ee645eea11a72881c98e.js": "/recipes-app/precache-manifest.e5e58dd6c7b6ee645eea11a72881c98e.js",
+    "precache-manifest.b215456745f5c7b1e58ddf3f71c384e0.js": "/recipes-app/precache-manifest.b215456745f5c7b1e58ddf3f71c384e0.js",
     "service-worker.js": "/recipes-app/service-worker.js",
     "static/css/2.fa6c921b.chunk.css.map": "/recipes-app/static/css/2.fa6c921b.chunk.css.map",
-    "static/css/main.6505dfbf.chunk.css.map": "/recipes-app/static/css/main.6505dfbf.chunk.css.map",
-    "static/js/2.d47e0ef8.chunk.js.LICENSE.txt": "/recipes-app/static/js/2.d47e0ef8.chunk.js.LICENSE.txt",
+    "static/css/main.587bbbb9.chunk.css.map": "/recipes-app/static/css/main.587bbbb9.chunk.css.map",
+    "static/js/2.1b4b4ae5.chunk.js.LICENSE.txt": "/recipes-app/static/js/2.1b4b4ae5.chunk.js.LICENSE.txt",
     "static/media/Login.css": "/recipes-app/static/media/29228_food.df867315.jpeg",
     "static/media/App.css": "/recipes-app/static/media/Rinstonia.b8463d1f.ttf",
     "static/media/blackHeartIcon.svg": "/recipes-app/static/media/blackHeartIcon.fed97292.svg",
@@ -46,8 +46,8 @@
   "entrypoints": [
     "static/js/runtime-main.60965406.js",
     "static/css/2.fa6c921b.chunk.css",
-    "static/js/2.d47e0ef8.chunk.js",
-    "static/css/main.6505dfbf.chunk.css",
-    "static/js/main.be513370.chunk.js"
+    "static/js/2.1b4b4ae5.chunk.js",
+    "static/css/main.587bbbb9.chunk.css",
+    "static/js/main.b741e012.chunk.js"
   ]
 }
