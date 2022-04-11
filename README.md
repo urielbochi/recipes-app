@@ -4,11 +4,11 @@
 
 ## Sobre 
 
-Um aplicativo (mobile) de receitas onde você encontra comidas e bebidas  para preparar. Ao clicar em uma receita, o usuário é redirecionado as instruções para realiza-la. Esse projeto foi desenvolvido em grupo.
+Um site de receitas onde você encontra comidas e bebidas  para preparar. Ao clicar em uma receita, o usuário é redirecionado as instruções para realiza-lá. Esse projeto foi desenvolvido em grupo e o CSS inteiramente feito por mim.
 
 ## Demonstração
 
-WIP ~ css em reparo
+WIP ~
 
 
 
