@@ -19,11 +19,8 @@ function ShareButton(props) {
   };
 
   return (
-    <div
-      type="button"
-      onClick={ () => { onclickHandle(); } }
-    >
-      <img className='shareConfig' src={ shareIcon } />
+    <div>
+      <img className='shareConfig' type="button" onClick={ () => { onclickHandle(); } } src={ shareIcon } />
       <p>
         {copiedbutton ? <p>Link copiado!</p> : ''}
       </p>

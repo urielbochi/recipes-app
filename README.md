@@ -50,10 +50,9 @@ E para inicializar a aplicação rode o comando:
 
 ## Integrantes 
 
--
+* [Uriel Woloszyn Bochi](https://github.com/urielbochi)
 
--
+- [Johann Munzlinger](https://github.com/jmlinger)
 
--
-
--
+* [Cristiano Lima](https://github.com/cristianocsl)
+* [Leonnardo Lair](https://github.com/Noarito0316)

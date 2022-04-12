@@ -1,33 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes, { bool } from 'prop-types';
-import getFavorite from '../services/getFavorite';
-import urlApiHandle, { DataManeger } from '../services/urlApiHandle';
-import wIcon from '../images/whiteHeartIcon.svg';
-import bIcon from '../images/blackHeartIcon.svg';
-import './ShareButton.css'
+import React, { useState, useEffect } from "react";
+import PropTypes, { bool } from "prop-types";
+import getFavorite from "../services/getFavorite";
+import urlApiHandle, { DataManeger } from "../services/urlApiHandle";
+import wIcon from "../images/whiteHeartIcon.svg";
+import bIcon from "../images/blackHeartIcon.svg";
+import "./ShareButton.css";
 
 const FavoriteChangerHandle = (Recipe, id, type) => {
-  const storage = localStorage.getItem('favoriteRecipes');
+  const storage = localStorage.getItem("favoriteRecipes");
   const storagejson = JSON.parse(storage);
   const objfavoritmount = {
     id,
-    type: type === 'comidas' ? 'comida' : 'bebida',
-    area: type === 'comidas' ? Recipe.area : '',
+    type: type === "comidas" ? "comida" : "bebida",
+    area: type === "comidas" ? Recipe.area : "",
     category: Recipe.category,
-    alcoholicOrNot: type === 'bebidas' ? Recipe.type : '',
+    alcoholicOrNot: type === "bebidas" ? Recipe.type : "",
     name: Recipe.tittle,
     image: Recipe.img,
   };
-  if (storagejson) { storagejson.push(objfavoritmount); }
+  if (storagejson) {
+    storagejson.push(objfavoritmount);
+  }
   const storageReturn = storagejson || [objfavoritmount];
-  localStorage.setItem('favoriteRecipes', JSON.stringify(storageReturn));
+  localStorage.setItem("favoriteRecipes", JSON.stringify(storageReturn));
 };
 
 const FavoriteRemoverHandle = (ID) => {
-  const storage = localStorage.getItem('favoriteRecipes');
+  const storage = localStorage.getItem("favoriteRecipes");
   let storagejson = JSON.parse(storage);
   storagejson = storagejson.filter((n) => n.id !== ID);
-  localStorage.setItem('favoriteRecipes', JSON.stringify(storagejson));
+  localStorage.setItem("favoriteRecipes", JSON.stringify(storagejson));
 };
 
 const FavoriteChanger = (itFavoriteOrNot, Recipe, id, type) => {
@@ -36,7 +38,7 @@ const FavoriteChanger = (itFavoriteOrNot, Recipe, id, type) => {
     return wIcon;
   }
   if (Recipe) {
-    console.log('fon');
+    console.log("fon");
     FavoriteChangerHandle(Recipe, id, type);
     return bIcon;
   }
@@ -66,14 +68,15 @@ function FavoriteButton(props) {
   }, [id, type, favorbutton]);
 
   return (
-    <div
-      type="button"
-      onClick={ () => {
-        if (isClicked) window.location.reload();
-        setfavorite(FavoriteChanger(getFavorite(id), Recipe, id, type));
-      } }
-    >
-      <img className='shareConfig' src={ favorbutton } />
+    <div>
+      <img
+        onClick={() => {
+          if (isClicked) window.location.reload();
+          setfavorite(FavoriteChanger(getFavorite(id), Recipe, id, type));
+        }}
+        className="shareConfig"
+        src={favorbutton}
+      />
     </div>
   );
 }
@@ -94,7 +97,6 @@ FavoriteButton.propTypes = {
   }).isRequired,
   datatestid: string.isRequired,
   isClicked: bool.isRequired,
-
 };
 
 export default FavoriteButton;

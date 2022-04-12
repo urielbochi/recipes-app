@@ -106,13 +106,15 @@
   @media only screen and (min-width: 200px) {
     @media only screen and (max-width: 499px) {
         .food__logo {
-            width: 55vh;
+            width: 43vh;
             margin-top: 100px;
             margin-bottom: 30px;
 
         }
         .main__food-logo-config {
             flex-direction: column;
+            align-items: center;
+            margin-right: 30px;
         }
         .main__food-description {
             font-size: 3vh;
