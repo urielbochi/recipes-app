@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b9af27012000c26be4924cdf7de2738",
+    "revision": "6d81f293bcb8ac1b04bf962098625406",
     "url": "/recipes-app/index.html"
   },
   {
-    "revision": "160b5c22d3f376b27281",
-    "url": "/recipes-app/static/css/2.fa6c921b.chunk.css"
+    "revision": "032d5e7e10dd8b66d952",
+    "url": "/recipes-app/static/css/2.de537473.chunk.css"
   },
   {
-    "revision": "79e915d96ba6d47ecccf",
-    "url": "/recipes-app/static/css/main.02ea9da0.chunk.css"
+    "revision": "b904320b4704ae6fea15",
+    "url": "/recipes-app/static/css/main.c3c2acc1.chunk.css"
   },
   {
-    "revision": "160b5c22d3f376b27281",
-    "url": "/recipes-app/static/js/2.ef93343a.chunk.js"
+    "revision": "032d5e7e10dd8b66d952",
+    "url": "/recipes-app/static/js/2.34e956d4.chunk.js"
   },
   {
     "revision": "c87e50d81cc7b5311525cc6fd5482ea5",
-    "url": "/recipes-app/static/js/2.ef93343a.chunk.js.LICENSE.txt"
+    "url": "/recipes-app/static/js/2.34e956d4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79e915d96ba6d47ecccf",
-    "url": "/recipes-app/static/js/main.7e658b13.chunk.js"
+    "revision": "b904320b4704ae6fea15",
+    "url": "/recipes-app/static/js/main.051730f6.chunk.js"
   },
   {
     "revision": "708b3c032c4ff34b4650",
@@ -54,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fed972920c028a3e1fc6065618e170c6",
     "url": "/recipes-app/static/media/blackHeartIcon.fed97292.svg"
-  },
-  {
-    "revision": "2ba23b99be5843fb31d56e3db9eb5ade",
-    "url": "/recipes-app/static/media/cocktails.2ba23b99.jpg"
   },
   {
     "revision": "c8b8c8efd802daa60ab166a643d3be06",
@@ -126,10 +122,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0a218dad3829d89bcf72675425a6b5fd",
     "url": "/recipes-app/static/media/mealIcon.0a218dad.svg"
-  },
-  {
-    "revision": "6a01c82ec47ff56406881458e0c86145",
-    "url": "/recipes-app/static/media/mesa.6a01c82e.jpg"
   },
   {
     "revision": "51b49a056f6fbe631fe1d2cba6f396a9",
