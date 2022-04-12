@@ -21,6 +21,10 @@
 
 }
 
+.delayTwo {
+  animation-delay: 2s;
+}
+
 .general__cards-images {
   width: 40vh;
   object-fit: cover;

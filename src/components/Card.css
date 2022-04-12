@@ -18,6 +18,14 @@
 }
 
 
+.configuration-setted:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: translate3d(0px, -20px, 0px);
+  transition: 0.8s;
+
+}
+
+
 .general__div-food-title {
   display: flex;
   flex-direction: column;

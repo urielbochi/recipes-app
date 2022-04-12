@@ -73,7 +73,7 @@ function FavoriteButton(props) {
         setfavorite(FavoriteChanger(getFavorite(id), Recipe, id, type));
       } }
     >
-      <img className='shareConfig' data-testid={ datatestid } src={ favorbutton } alt="white-heart" />
+      <img className='shareConfig' src={ favorbutton } />
     </div>
   );
 }

@@ -2,18 +2,16 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import DrinkCard from "../components/DrinkCard";
 import {
   drinkCategoriesFetch,
   drinkListFetch,
 } from "../redux/actions/actionDrink";
-import cockTails from "../images/cocktails.jpg";
-import mesa from "../images/mesa.jpg";
 import drink from "../images/drinking.jpeg";
 import DrinkCategories from "../components/DrinkCategories";
-import blackout from '../images/blackout.png'
 import "./FoodCards.css";
+import "./MainFood.css";
+import "animate.css";
 
 function MainDrink() {
   const dispatch = useDispatch();

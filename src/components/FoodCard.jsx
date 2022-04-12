@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import './Card.css';
+import "animate.css";
+
 
 function FoodCard({ food: { strMeal, strMealThumb }, index }) {
   const myCardStyle = {
@@ -11,7 +13,7 @@ function FoodCard({ food: { strMeal, strMealThumb }, index }) {
     fontSize: '25px',
   }
   return (
-    <Card className='card__configuration-general'>
+    <Card className='card__configuration-general animate__animated animate__fadeIn'>
       <Card.Img
         className="configuration-setted"
         data-testid={`${index}-card-img`}

@@ -12,6 +12,8 @@ import FoodCategories from "../components/FoodCategories";
 import logoFood from "../images/logofood.png";
 import "./FoodCards.css";
 import "./MainFood.css";
+import "animate.css";
+
 
 
 function MainFood() {
@@ -34,14 +36,14 @@ function MainFood() {
   return (
     <div>
       <Header title="Meal foods" />
-      <div className="main__food-logo-config">
+      <div className="main__food-logo-config animate__animated animate__fadeInDown delayOne">
         <img className="food__logo" src={logoFood} />
         <div className="main__food-subclass-adjust">
           <h6 className="chef__secrets">CHEFS SECRETS</h6>
           <p className="main__food-description">UNIQUE AND APPETIZING CUISINE FOR ENJOY SPECIAL MOMENTS IN LIFE</p>
         </div>
       </div>
-      <div className="food__order-background">
+      <div className="food__order-background animate__animated animate__bounceInUp">
       <h1 className="main__food-recipes-title">Recettes menu</h1>
       <FoodCategories />
       <div className="drinks__order">

@@ -63,7 +63,7 @@ function Details(props) {
       </div>
 
       <div className="details__ingredients-container">
-        <img src={prepar} />
+        <img className="mobile-image__configuration" src={prepar} />
         <h2 className="title__ingredients-list">Get to work</h2>
         <div className="get__ready-cook">
           <p className="ingredients__configurations">
