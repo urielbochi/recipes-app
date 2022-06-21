@@ -31,7 +31,7 @@
 }
 
 .explore__header-general-padding {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .seeking__h1-title {
@@ -40,20 +40,23 @@
   color: #723e31;
 }
 
+.explore__discover-general {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
 .drinkPerIngredient__padding-bottom {
   padding-bottom: 100px;
 }
 
+
 @media only screen and (min-width: 200px) {
-  @media only screen and (max-width: 499px) {
+  @media only screen and (max-width: 800px) {
     .explore-image-general-config {
       width: 100%;
     }
     .explore__header-padding {
       padding-bottom: 100px;
-    }
-    .explore__discover-general {
-      width: 100%;
     }
     .seeking__h1-title {
       font-size: 35px;

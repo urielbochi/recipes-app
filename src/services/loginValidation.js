@@ -3,7 +3,7 @@ export const emailValidator = (email) => {
   return regex.test(email); // retorna true ou false.
 };
 
-const MIN_LENGTH_PASSWORD = 7;
+const MIN_LENGTH_PASSWORD = 3;
 export const passwordValidator = (password) => (password.length >= MIN_LENGTH_PASSWORD); // retorna true ou false.
 
 const loginValidation = ({ email, password }) => (

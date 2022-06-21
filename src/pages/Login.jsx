@@ -1,27 +1,20 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import loginValidation from "../services/loginValidation";
 import actionLogin from "../redux/actions/actionLogin";
 import "./Login.css";
-import { useEffect } from "react";
 
 const Login = () => {
-  const text = "cuidado!";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  /* handleLocalStorage com a ajuda de Camila Damásio, Grupo 10  */
   const handleLocalStorage = (emailString) => {
     localStorage.setItem("user", JSON.stringify({ email: emailString }));
     localStorage.setItem("mealsToken", 1);
     localStorage.setItem("cocktailsToken", 1);
   };
-
-  // useEffect(() => {
-  //   // alert('Por favor, visualize em 360x640')
-  // },[])
 
   return (
     <div className="login__general-container">
@@ -40,7 +33,7 @@ const Login = () => {
                 onChange={({ target: { value } }) => setEmail(value)}
                 data-testid="email-input"
                 type="email"
-                placeholder="email"
+                placeholder="Digite qualquer email válido"
                 name="email"
                 className="login__input-configuration"
               />
@@ -51,7 +44,7 @@ const Login = () => {
                 onChange={({ target: { value } }) => setPassword(value)}
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Digite qualquer senha (3 caracteres)"
                 data-testid="password-input"
                 className="login__input-configuration"
               />
